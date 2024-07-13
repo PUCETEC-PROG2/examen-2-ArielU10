@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ movie }}{% endblock title %}
+{% block content %}
+    <p class="py-4">Has elegido la pelicula: <strong>{{ movie | capfirst }}</strong></p>
+    <ul>
+        <li>Año de publicación: {{ pokemon.year }}</li>
+        <li>Director: {{ pokemon.name_director }} kg.</li>
+        <li>Genero: {{ pokemon.genre }} cm.</li>
+        <li>Sinopsis: {{ pokemon.synopsis }} cm.</li>
+    </ul>
+{% endblock content %}

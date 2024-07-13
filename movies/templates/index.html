@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}BIBLIOTECA DE PELICULAS{% endblock title %}
+{% block content %}
+    <p class="p-2">Hola, bienvenido a la biblioteca de peliculas</p>
+    <ul class="list-group">
+        {% for movie in movies %}
+        <li class="list-group-item text-secondary">
+            <a href="movie/{{movie.id}}">{{ movie | capfirst }}</a>
+            <p>{{ movie.get_type_display }}</p>
+        </li>
+    </ul>
+            {% endfor %}
+    {% endblock content %}
