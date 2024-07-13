@@ -11,7 +11,7 @@ def index(request):
 
 def movie(request, movie_id):
     #SELECT * FROM movie_movie WHERE id='movie_id'
-    pokemon = Movie.objects.get(id=movie_id)
+    movie = Movie.objects.get(id=movie_id)
     template = loader.get_template('display_movie.html')
     context = {
         'movie': movie 

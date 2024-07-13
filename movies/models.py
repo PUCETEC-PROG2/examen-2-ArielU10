@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Movie(models.Model):
-    id = models.IntegerField(null=False)
+    #id_movie = models.IntegerField(null=False)
     MOVIE_GENRE = {
         ("T", "Terror"),
         ("A", "Accion"),
@@ -13,7 +13,7 @@ class Movie(models.Model):
     genre = models.CharField(max_length=30, choices=MOVIE_GENRE, null=False)
     director_name = models.CharField(max_length=30, null=False)
     year = models.IntegerField(null=False)
-    synopsis = models.TextField
+    synopsis = models.TextField(null=False, default="")
     
     def __str__(self) -> str:
         return self.title

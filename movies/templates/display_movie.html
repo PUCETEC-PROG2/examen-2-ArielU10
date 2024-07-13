@@ -2,10 +2,12 @@
 {% block title %}{{ movie }}{% endblock title %}
 {% block content %}
     <p class="py-4">Has elegido la pelicula: <strong>{{ movie | capfirst }}</strong></p>
+    <h3>Titulo: {{ movie.title }}</h3>
     <ul>
-        <li>Año de publicación: {{ pokemon.year }}</li>
-        <li>Director: {{ pokemon.name_director }} kg.</li>
-        <li>Genero: {{ pokemon.genre }} cm.</li>
-        <li>Sinopsis: {{ pokemon.synopsis }} cm.</li>
+        
+        <li>Director: {{ movie.director_name}} kg.</li>
+        <li>Genero: {{ movie.genre }} cm.</li>
+        <li>Año: {{ movie.year }} cm.</li>
+        <li>Sinopsis: {{ movie.synopsis }} cm.</li>
     </ul>
 {% endblock content %}
